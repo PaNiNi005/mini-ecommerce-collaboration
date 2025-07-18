@@ -25,13 +25,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Inefficient Search
+    // Improved Search with Validation
     searchInput.addEventListener('keyup', () => {
-        const searchTerm = searchInput.value.toLowerCase();
-        const filteredProducts = allProducts.filter(product => {
-            // Simple search, not very efficient
-            return product.name.toLowerCase().includes(searchTerm);
-        });
+        const searchTerm = searchInput.value.trim().toLowerCase();
+
+        if (searchTerm === '') {
+            // If input is empty, show all products
+            displayProducts(allProducts);
+            return;
+        }
+
+        const filteredProducts = allProducts.filter(product =>
+            product.name.toLowerCase().includes(searchTerm)
+        );
         displayProducts(filteredProducts);
     });
 });
