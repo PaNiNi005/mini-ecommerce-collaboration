@@ -1,8 +1,6 @@
 [
-    {"id": 1, "name": "Classic T-Shirt", "price": 499, "image": "https://cdn.shopify.com/s/files/1/0814/1855/1581/files/4H9A4067_1.jpg?v=1737085911"},
-    {"id": 2, "name": "Running Shoes", "price": 1200, "image": "https://runningmagazine.ca/wp-content/uploads/2024/08/176084_with_0562-1024x658.jpg%7D"},
-    {"id": 3, "name": "Smart Watch", "price": 3500, "image": "https://www.leafstudios.in/cdn/shop/files/1_1099cd20-7237-4bdf-a180-b7126de5ef3d_1000x.png?v=1722230645"},
-    {"id": 4, "name": "Denim Jeans", "price": 990, "image": "https://scene7.zumiez.com/is/image/zumiez/product_main_medium_2x/Empyre-Tori-Billie-Wash-Skate-Jeans-_348325-front-US.jpg"},
-    {"id": 5, "name": "Leather Backpack", "price": 1850, "image": "https://images.unsplash.com/photo-1561126135-b7a5dfadace6?q=80&w=500"},
-    {"id": 6, "name": "Sunglasses", "price": 750, "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=500&q=80"}
+    {"id": 1, "name": "Classic T-Shirt", "price": 499, "image": "https://placehold.co/150/FF0000/FFFFFF?text=T-Shirt"},
+    {"id": 2, "name": "Running Shoes", "price": 1200, "image": "https://placehold.co/150/0000FF/FFFFFF?text=Shoes"},
+    {"id": 3, "name": "Smart Watch", "price": 3500, "image": "https://placehold.co/150/00FF00/FFFFFF?text=Watch"},
+    {"id": 4, "name": "Denim Jeans", "price": 990, "image": "https://placehold.co/150/FFFF00/000000?text=Jeans"}
 ]
