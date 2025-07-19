@@ -32,8 +32,16 @@ document.addEventListener('DOMContentLoaded', () => {
         return price.toLocaleString('th-TH');
     }
 
+    // Improved Search with Validation
     searchInput.addEventListener('keyup', () => {
-        const searchTerm = searchInput.value.toLowerCase();
+        const searchTerm = searchInput.value.trim().toLowerCase();
+
+        if (searchTerm === '') {
+            // If input is empty, show all products
+            displayProducts(allProducts);
+            return;
+        }
+
         const filteredProducts = allProducts.filter(product =>
             product.name.toLowerCase().includes(searchTerm)
         );
