@@ -14,27 +14,29 @@ document.addEventListener('DOMContentLoaded', () => {
             loader.style.display = 'none'; // Hide loader after load
         });
 
-    function displayProducts(products) {
-        productList.innerHTML = '';
-        products.forEach(product => {
-            const card = document.createElement('div');
-            card.className = 'product-card';
-            card.innerHTML = `
-                <img src="${product.image}" alt="${product.name}">
-                <h3>${product.name}</h3>
-                <p>ราคา: ${formatPrice(product.price)} บาท</p>
-            `;
-            productList.appendChild(card);
-        });
+   function displayProducts(products) {
+    productList.innerHTML = '';
+    products.forEach(product => {
+        const card = document.createElement('div');
+        card.className = 'product-card';
+        card.innerHTML = `
+            <img src="${product.image}" alt="${product.name}">
+            <h3>${product.name}</h3>
+            <p>ราคา: ${formatPrice(product.price)} บาท</p>
+        `;
+        productList.appendChild(card);
+    });
+}
+ function formatPrice(price) {
+        return price.toLocaleString('th-TH');
     }
 
-    // Inefficient Search
     searchInput.addEventListener('keyup', () => {
+        
         const searchTerm = searchInput.value.toLowerCase();
-        const filteredProducts = allProducts.filter(product => {
-            // Simple search, not very efficient
-            return product.name.toLowerCase().includes(searchTerm);
-        });
+        const filteredProducts = allProducts.filter(product =>
+            product.name.toLowerCase().includes(searchTerm)
+        );
         displayProducts(filteredProducts);
     });
 });
